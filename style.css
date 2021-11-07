@@ -1,0 +1,486 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --rayyan-color: rgb(190, 69, 69);
+    --bg-color: rgba(​204, ​204, 204, .5);
+    --white-color: #fff;
+    --black-color: #000;
+    --muted-color: #222;
+}
+
+@font-face {
+    font-family: "gandom";
+    src: url(../font/Gandom.ttf);
+}
+
+@font-face {
+    font-family: "koodak";
+    src: url(../font/Bkoodak.ttf);
+}
+
+@font-face {
+    font-family: "yekan";
+    src: url(../font/Yekan.ttf);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-color);
+}
+
+.navbar-brand-title a {
+    color: var(--rayyan-color);
+    text-decoration: none;
+    font-family: "koodak";
+    font-size: 1.5rem;
+}
+
+.navbar-hamburger {
+    display: flex;
+}
+
+.navbar-menu-list {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.navbar-menu-list li {
+    list-style-type: none;
+    padding: 0 1rem;
+}
+
+.navbar-menu-list li a {
+    text-decoration: none;
+    font-family: "yekan";
+    color: var(--muted-color);
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.navbar-menu-list li a:hover {
+    color: var(--rayyan-color);
+}
+
+.menu {
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .navbar-menu-list li {
+        padding: 0 .5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-menu-list {
+        position: fixed;
+        top: -100%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(40, 40, 40, .95);
+        z-index: 2;
+        display: block;
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+    }
+    .navbar-menu-list li {
+        display: block;
+        margin: 1rem 0;
+        padding: 1rem 2rem;
+        text-align: center;
+        border-bottom: 1.5px solid #fff;
+    }
+    .navbar-menu-list li a {
+        color: #fff;
+        display: block;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: all 1s ease-out;
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;
+    }
+    .hamurger-line {
+        z-index: 2;
+    }
+    .hamburger-line-item {
+        width: 100%;
+        height: 4px;
+        background-color: var(--black-color);
+        transform-origin: left;
+        transition: all 1s ease-out;
+    }
+    .checkbox:checked~.hamurger-line .menu {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        position: fixed;
+        top: 2%;
+        left: 5%;
+    }
+    .checkbox:checked~.hamurger-line .menu .hamburger-line-1 {
+        transform: rotate(40deg);
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+        -o-transform: rotate(40deg);
+    }
+    .checkbox:checked~.hamurger-line .menu .hamburger-line-2 {
+        opacity: 0;
+    }
+    .checkbox:checked~.hamurger-line .menu .hamburger-line-3 {
+        transform: rotate(-40deg);
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-40deg);
+        -ms-transform: rotate(-40deg);
+        -o-transform: rotate(-40deg);
+    }
+    .checkbox:checked+.navbar-menu .navbar-menu-list {
+        top: 0;
+    }
+}
+
+
+/* end navbar */
+
+
+/* start header */
+
+.header {
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .7)), url(../img/fastfood/6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-top-title {
+    color: var(--rayyan-color);
+    padding: 0 .5rem;
+    font-family: "koodak";
+    font-size: 5.2vw;
+}
+
+.header-top span {
+    font-family: "yekan";
+    font-size: 5vw;
+    color: var(--white-color);
+}
+
+.header-bottom {
+    text-align: center;
+    color: var(--white-color);
+    font-family: "yekan";
+}
+
+.header-bottom h4 {
+    font-weight: normal;
+    font-size: 4vw;
+    margin-top: 2rem;
+}
+
+.header-bottom h5 {
+    font-weight: normal;
+    font-size: 3vw;
+    margin-top: 1rem;
+}
+
+
+/* end header */
+
+
+/* start main */
+
+.main {
+    margin: 2rem 0 10rem;
+}
+
+.cholo-food-title {
+    text-align: center;
+    font-family: "gandom";
+    margin: 3.5rem 0 1.5rem;
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.cholo-food-title:after {
+    /* content: "";
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15%;
+    height: 2px;
+    background-color: var(--black-color); */
+    content: "";
+    position: relative;
+    width: 15%;
+    height: 2px;
+    background-color: var(--black-color);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cholo-food {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: var(--rayyan-color);
+    padding: 1.5rem 0;
+    color: var(--black-color);
+    grid-gap: .5;
+}
+
+.cholo-food-card {
+    border: 2px solid var(--white-color);
+    background-color: var(--white-color);
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    margin: .75rem;
+    padding: .3rem;
+}
+
+.cholo-food-card-header {
+    width: 100%;
+    border-bottom: 1px solid var(--black-color);
+}
+
+.cholo-food-card-header img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    object-fit: cover;
+}
+
+.cholo-food-card-body {
+    background-color: #fff;
+    padding: .5rem 0;
+}
+
+.cholo-food-card-body-name {
+    display: block;
+    text-align: center;
+    font-family: "yekan";
+    font-size: 1.2rem;
+}
+
+.cholo-food-card-body-price {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: "yekan";
+    font-size: 1.2rem;
+}
+
+.btn {
+    width: 97%;
+    padding: .5rem;
+    text-align: center;
+    font-family: "koodak";
+    color: var(--white-color);
+    font-size: 1rem;
+    background-color: rgb(52, 161, 52);
+    border: none;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    display: block;
+    margin: .5rem auto;
+    cursor: pointer;
+}
+
+.gallery {
+    margin: 3.5rem 0 1.5rem;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "gandom";
+}
+
+.gallery-title:after,
+.gallery-title:before {
+    content: "";
+    position: relative;
+    width: 5%;
+    height: 2px;
+    background-color: var(--black-color);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.gallery-image {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 300px);
+    grid-auto-rows: 300px;
+    grid-template-areas: 'gallery-img-1 gallery-img-1 gallery-img-2' 'gallery-img-3 gallery-img-4 gallery-img-2' 'gallery-img-3 gallery-img-5 gallery-img-5';
+    grid-gap: 1rem;
+    margin: 1.5rem 1rem;
+}
+
+.gallery-image-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    box-shadow: 2px 2px 10px #000;
+}
+
+.gallery-img-1 {
+    grid-area: gallery-img-1;
+}
+
+.gallery-img-2 {
+    grid-area: gallery-img-2;
+}
+
+.gallery-img-3 {
+    grid-area: gallery-img-3;
+}
+
+.gallery-img-4 {
+    grid-area: gallery-img-4;
+}
+
+.gallery-img-5 {
+    grid-area: gallery-img-5;
+}
+
+@media(max-width: 800px) {
+    .cholo-food-title {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: .75rem;
+        padding: .2rem;
+    }
+    .cholo-food-card-body-name,
+    .cholo-food-card-body-price {
+        font-size: .8rem;
+    }
+    .gallery-title {
+        font-size: 1rem;
+    }
+    .gallery-image {
+        grid-template-areas: 'gallery-img-1 gallery-img-1 gallery-img-2' 'gallery-img-3 gallery-img-4 gallery-img-4' 'gallery-img-5 gallery-img-5 gallery-img-5';
+    }
+}
+
+@media(max-width: 650px) {
+    .gallery-image {
+        grid-template-areas: 'gallery-img-1 gallery-img-1' 'gallery-img-2 gallery-img-3' 'gallery-img-4 gallery-img-4' 'gallery-img-5 gallery-img-5';
+    }
+}
+
+@media(max-width: 400px) {
+    .gallery-image {
+        grid-template-areas: 'gallery-img-1 gallery-img-1' 'gallery-img-2 gallery-img-2' 'gallery-img-3 gallery-img-3' 'gallery-img-4 gallery-img-4' 'gallery-img-5 gallery-img-5';
+    }
+}
+
+
+/* end main */
+
+
+/* start footer */
+
+.footer {
+    background-color: gray;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-left {
+    display: flex;
+    direction: rtl;
+    color: var(--white-color);
+    font-family: "gandom";
+}
+
+.footer-left-copy {
+    font-weight: 600;
+}
+
+.social-media li {
+    list-style-type: none;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.social-media li a {
+    color: var(--white-color);
+}
+
+.telegram,
+.instagram,
+.whatsapp {
+    transition: all .75s;
+    -webkit-transition: all .75s;
+    -moz-transition: all .75s;
+    -ms-transition: all .75s;
+    -o-transition: all .75s;
+}
+
+.telegram:hover {
+    color: #1075d4;
+}
+
+.instagram:hover {
+    color: rgb(190, 69, 69);
+}
+
+.whatsapp:hover {
+    color: #5bd843;
+}
+
+
+/* end footer */
